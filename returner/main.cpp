@@ -5,7 +5,7 @@
 
 auto parse_args(int argc, char * argv[])
 {
-    auto parser = argparse::ArgumentParser();
+    auto parser = argparse::ArgumentParser().description("Utility that returns given value (or 0) and optionally outputs given text to stdout");
     parser.add_argument("-r", "--return").help("value to return").type<int>().default_(0);
     parser.add_argument("-s", "--say").help("text to output to stdout");
 
